@@ -1,0 +1,143 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+  
+  h1 {
+    font-size: 2.5rem;
+    margin: 20px 0;
+    color: #ff6347;
+  }
+  
+  .pokedex {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    width: 90%;
+    max-width: 1200px;
+    justify-content: center;
+  }
+  
+  .pokemon-card {
+    display: grid;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    text-align: center;
+    transition: transform 0.3s ease;
+  }
+  
+  .pokemon-card:hover {
+    transform: translateY(-10px);
+  }
+  
+  .pokemon-card img {
+    max-width: 100%;
+    border-radius: 10px;
+    background-color: #f7f7f7;
+    padding: 10px;
+  }
+  
+  .pokemon-info {
+    margin-top: 10px;
+  }
+  
+  .pokemon-number {
+    font-size: 1rem;
+    color: #666;
+  }
+  
+  .pokemon-name {
+    font-size: 1.2rem;
+    margin: 5px 0;
+    color: #333;
+  }
+  
+  /* Tipos de Pokémon */
+  .pokemon-types {
+    margin-top: 10px;
+  }
+  
+  .type {
+    display: inline-block;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 0.9rem;
+    margin: 0 5px;
+    color: #fff;
+    font-weight: bold;
+  }
+  
+  /* Colores de los tipos */
+  .type-grass {
+    background-color: #78c850;
+  }
+  
+  .type-poison {
+    background-color: #a040a0;
+  }
+  
+  .type-fire {
+    background-color: #f08030;
+  }
+  
+  .type-water {
+    background-color: #6890f0;
+  }
+  
+  .type-flying {
+    background-color: #a890f0;
+  }
+  
+  .type-bug {
+    background-color: #a8b820;
+  }
+  
+  .type-normal {
+    background-color: #a8a878;
+  }
+  
+  .type-electric {
+    background-color: #f8d030;
+  }
+
+  .type-land {
+    background-color: brown;
+  }
+
+  .type-fairy{
+    background-color:pink ;
+  }
+  
+  /* Responsive para pantallas más pequeñas */
+  @media (max-width: 1024px) {
+    .pokedex {
+      grid-template-columns: repeat(3, 1fr); /* 3 columnas en pantallas medianas */
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .pokedex {
+      grid-template-columns: repeat(2, 1fr); /* 2 columnas en pantallas pequeñas */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .pokedex {
+      grid-template-columns: 1fr; /* 1 columna en pantallas muy pequeñas */
+    }
+  }
+  
