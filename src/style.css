@@ -6,7 +6,7 @@
   
   body {
     font-family: Arial, sans-serif;
-    background-color: #f2f2f2;
+    background-color: whitesmoke;
     color: #333;
     display: flex;
     justify-content: center;
@@ -121,7 +121,36 @@
   .type-fairy{
     background-color:pink ;
   }
+
+  .type-fight{
+    background-color: red;
+  }
   
+ .type-psychic{
+  background-color: purple;
+ }
+
+ .type-rock{
+  background-color: grey;
+ }
+
+ .type-steal{
+  background-color: blue;
+ }
+
+.type-ice{
+  background-color: lightblue;
+  color: black;
+}
+
+.type-ghost{
+  background-color: darkgray;
+}
+
+.type-plant{
+  background-color: green;
+}
+
   /* Responsive para pantallas más pequeñas */
   @media (max-width: 1024px) {
     .pokedex {
