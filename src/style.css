@@ -1,172 +1,173 @@
+
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
-  body {
-    font-family: Arial, sans-serif;
-    background-color: whitesmoke;
-    color: #333;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    min-height: 100vh;
-  }
-  
-  h1 {
-    font-size: 2.5rem;
-    margin: 20px 0;
-    color: #ff6347;
-  }
-  
-  .pokedex {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 20px;
-    width: 90%;
-    max-width: 1200px;
-    justify-content: center;
-  }
-  
-  .pokemon-card {
-    display: grid;
-    background-color: #fff;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    padding: 15px;
-    text-align: center;
-    transition: transform 0.3s ease;
-  }
-  
-  .pokemon-card:hover {
-    transform: translateY(-10px);
-  }
-  
-  .pokemon-card img {
-    max-width: 100%;
-    border-radius: 10px;
-    background-color: #f7f7f7;
-    padding: 10px;
-  }
-  
-  .pokemon-info {
-    margin-top: 10px;
-  }
-  
-  .pokemon-number {
-    font-size: 1rem;
-    color: #666;
-  }
-  
-  .pokemon-name {
-    font-size: 1.2rem;
-    margin: 5px 0;
-    color: #333;
-  }
-  
-  /* Tipos de Pokémon */
-  .pokemon-types {
-    margin-top: 10px;
-  }
-  
-  .type {
-    display: inline-block;
-    padding: 5px 10px;
-    border-radius: 5px;
-    font-size: 0.9rem;
-    margin: 0 5px;
-    color: #fff;
-    font-weight: bold;
-  }
-  
-  /* Colores de los tipos */
-  .type-grass {
-    background-color: #78c850;
-  }
-  
-  .type-poison {
-    background-color: #a040a0;
-  }
-  
-  .type-fire {
-    background-color: #f08030;
-  }
-  
-  .type-water {
-    background-color: #6890f0;
-  }
-  
-  .type-flying {
-    background-color: #a890f0;
-  }
-  
-  .type-bug {
-    background-color: #a8b820;
-  }
-  
-  .type-normal {
-    background-color: #a8a878;
-  }
-  
-  .type-electric {
-    background-color: #f8d030;
-  }
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-  .type-land {
-    background-color: brown;
-  }
+body {
+  font-family: Arial, sans-serif;
+  background-color: whitesmoke;
+  color: #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  min-height: 100vh;
+}
 
-  .type-fairy{
-    background-color:pink ;
-  }
+h1 {
+  font-size: 2.5rem;
+  margin: 20px 0;
+  color: #ff6347;
+}
 
-  .type-fight{
-    background-color: red;
-  }
-  
- .type-psychic{
-  background-color: purple;
- }
+.pokedex {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  width: 90%;
+  max-width: 1200px;
+  justify-content: center;
+}
 
- .type-rock{
-  background-color: grey;
- }
+.pokemon-card {
+  display: grid;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 15px;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
 
- .type-steal{
-  background-color: blue;
- }
+.pokemon-card:hover {
+  transform: translateY(-10px);
+}
+
+.pokemon-card img {
+  max-width: 100%;
+  border-radius: 10px;
+  background-color: #f7f7f7;
+  padding: 10px;
+}
+
+.pokemon-info {
+  margin-top: 10px;
+}
+
+.pokemon-number {
+  font-size: 1rem;
+  color: #666;
+}
+
+.pokemon-name {
+  font-size: 1.2rem;
+  margin: 5px 0;
+  color: #333;
+}
+
+/* Tipos de Pokémon */
+.pokemon-types {
+  margin-top: 10px;
+}
+
+.type {
+  display: inline-block;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 0.9rem;
+  margin: 0 5px;
+  color: #fff;
+  font-weight: bold;
+}
+
+/* Colores de los tipos */
+.type-grass {
+  background-color: #78c850;
+}
+
+.type-poison {
+  background-color: #a040a0;
+}
+
+.type-fire {
+  background-color: #f08030;
+}
+
+.type-water {
+  background-color: #6890f0;
+}
+
+.type-flying {
+  background-color: #a890f0;
+}
+
+.type-bug {
+  background-color: #a8b820;
+}
+
+.type-normal {
+  background-color: #a8a878;
+}
+
+.type-electric {
+  background-color: #f8d030;
+}
+
+.type-land {
+  background-color: brown;
+}
+
+.type-fairy{
+  background-color:pink ;
+}
+
+.type-fight{
+  background-color: red;
+}
+
+.type-psychic{
+background-color: purple;
+}
+
+.type-rock{
+background-color: grey;
+}
+
+.type-steal{
+background-color: blue;
+}
 
 .type-ice{
-  background-color: lightblue;
-  color: black;
+background-color: lightblue;
+color: black;
 }
 
 .type-ghost{
-  background-color: darkgray;
+background-color: darkgray;
 }
 
 .type-plant{
-  background-color: green;
+background-color: green;
 }
 
-  /* Responsive para pantallas más pequeñas */
-  @media (max-width: 1024px) {
-    .pokedex {
-      grid-template-columns: repeat(3, 1fr); /* 3 columnas en pantallas medianas */
-    }
+/* Responsive para pantallas más pequeñas */
+@media (max-width: 1024px) {
+  .pokedex {
+    grid-template-columns: repeat(3, 1fr); /* 3 columnas en pantallas medianas */
   }
-  
-  @media (max-width: 768px) {
-    .pokedex {
-      grid-template-columns: repeat(2, 1fr); /* 2 columnas en pantallas pequeñas */
-    }
+}
+
+@media (max-width: 768px) {
+  .pokedex {
+    grid-template-columns: repeat(2, 1fr); /* 2 columnas en pantallas pequeñas */
   }
-  
-  @media (max-width: 480px) {
-    .pokedex {
-      grid-template-columns: 1fr; /* 1 columna en pantallas muy pequeñas */
-    }
+}
+
+@media (max-width: 480px) {
+  .pokedex {
+    grid-template-columns: 1fr; /* 1 columna en pantallas muy pequeñas */
   }
-  
+}
+
