@@ -25,6 +25,7 @@ La **Pokedex Suprema** es una aplicación web que presenta tarjetas de Pokémon 
 ## Estructura del Proyecto
 
 
+
 ### Archivos Clave
 
 - **index.html**: Contiene la estructura básica de la página y el contenedor donde se insertarán las tarjetas.
@@ -48,3 +49,6 @@ La **Pokedex Suprema** es una aplicación web que presenta tarjetas de Pokémon 
 
 ¡Las contribuciones son bienvenidas! Si deseas mejorar este proyecto o agregar nuevas características, siéntete libre de hacer un fork y enviar un pull request.
 
+## Agradecimientos
+
+Este proyecto ha sido desarrollado por Edward Alexis, con una valiosa colaboración de [ChatGPT](https://openai.com), quien asistió en la corrección de errores, la mejora del código y la creación de algunas partes del proyecto. ¡Gracias por la ayuda en llevar este proyecto al siguiente nivel!
