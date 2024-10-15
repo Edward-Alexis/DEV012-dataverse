@@ -67,7 +67,6 @@ h1 {
   color: #333;
 }
 
-/* Tipos de Pokémon */
 .pokemon-types {
   margin-top: 10px;
 }
@@ -82,7 +81,6 @@ h1 {
   font-weight: bold;
 }
 
-/* Colores de los tipos */
 .type-grass {
   background-color: #78c850;
 }
@@ -152,22 +150,21 @@ background-color: darkgray;
 background-color: green;
 }
 
-/* Responsive para pantallas más pequeñas */
 @media (max-width: 1024px) {
   .pokedex {
-    grid-template-columns: repeat(3, 1fr); /* 3 columnas en pantallas medianas */
+    grid-template-columns: repeat(3, 1fr);
   }
 }
 
 @media (max-width: 768px) {
   .pokedex {
-    grid-template-columns: repeat(2, 1fr); /* 2 columnas en pantallas pequeñas */
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
 @media (max-width: 480px) {
   .pokedex {
-    grid-template-columns: 1fr; /* 1 columna en pantallas muy pequeñas */
+    grid-template-columns: 1fr;
   }
 }
 

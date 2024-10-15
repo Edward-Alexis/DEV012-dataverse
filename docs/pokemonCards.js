@@ -832,39 +832,62 @@ const pokemonList = [
     type2: '',
     weakness: 'Agua, Planta y Hielo'
   },
-  
-  
 ];
 
-// Generar tarjetas de Pokémon
-function generatePokemonCards(pokemonList) {
-  let cards = ''; // Aquí se almacenarán las tarjetas
+const typeMap = {
+  'Planta': 'grass',
+  'Veneno': 'poison',
+  'Fuego': 'fire',
+  'Agua': 'water',
+  'Bicho': 'bug',
+  'Roca': 'rock',
+  'Tierra': 'land',
+  'Volador': 'flying',
+  'Eléctrico': 'electric',
+  'Hielo': 'ice',
+  'Psíquico': 'psychic',
+  'Normal':'normal',
+  'Hada':'fairy',
+  'Metal':'steal',
+  'Fantasma' : 'ghost',
+  'Lucha' : 'fight'
+};
 
-  pokemonList.forEach(pokemon => {
-    cards += `
-      <div class="pokemon-card">
-        <div class="pokemon-card-inner">
-          <div class="pokemon-card-front">
-            <img src="${pokemon.image}" alt="${pokemon.name}">
-            <div class="pokemon-info">
-              <p class="pokemon-number">N.º ${pokemon.number}</p>
-              <h3 class="pokemon-name">${pokemon.name}</h3>
-              <div class="pokemon-types">
-                <span class="type type-${pokemon.type1.toLowerCase()}">${pokemon.type1}</span>
-                ${pokemon.type2 ? `<span class="type type-${pokemon.type2.toLowerCase()}">${pokemon.type2}</span>` : ''}
-              </div>
+function renderPokemonCard(pokemon) {
+  const typeClass1 = typeMap[pokemon.type1];
+  const typeClass2 = typeMap[pokemon.type2];
+
+  return `
+    <div class="pokemon-card">
+      <div class="pokemon-card-inner">
+        <div class="pokemon-card-front">
+          <img src="${pokemon.image}" alt="${pokemon.name}">
+          <div class="pokemon-info">
+            <p class="pokemon-number">N.º ${pokemon.number}</p>
+            <h3 class="pokemon-name">${pokemon.name}</h3>
+            <div class="pokemon-types">
+              <span class="type type-${typeClass1}">${pokemon.type1}</span>
+              ${pokemon.type2 ? `<span class="type type-${typeClass2}">${pokemon.type2}</span>` : ''}
             </div>
           </div>
-          <div class="pokemon-card-back">
-            <h3 class="pokemon-name">${pokemon.name}</h3>
-            <p>Este Pokémon es débil contra ${pokemon.weakness}.</p>
-          </div>
+        </div>
+        <div class="pokemon-card-back">
+          <h3 class="pokemon-name">${pokemon.name}</h3>
+          <p>Este Pokémon es débil contra pokemons de tipo ${pokemon.weakness}.</p>
         </div>
       </div>
-    `;
+    </div>
+  `;
+}
+
+function generatePokemonCards(pokemonList) {
+  let cards = '';
+
+  pokemonList.forEach(pokemon => {
+    cards += renderPokemonCard(pokemon);
   });
 
-  document.getElementById('pokedex').innerHTML = cards; // Inserta las tarjetas en el div "pokedex"
+  document.getElementById('pokedex').innerHTML = cards;
 }
 
 generatePokemonCards(pokemonList);
