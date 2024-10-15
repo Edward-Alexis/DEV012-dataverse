@@ -841,16 +841,16 @@ const typeMap = {
   'Agua': 'water',
   'Bicho': 'bug',
   'Roca': 'rock',
-  'Tierra': 'land',
+  'Tierra': 'ground',
   'Volador': 'flying',
   'Eléctrico': 'electric',
   'Hielo': 'ice',
   'Psíquico': 'psychic',
-  'Normal':'normal',
-  'Hada':'fairy',
-  'Metal':'steal',
-  'Fantasma' : 'ghost',
-  'Lucha' : 'fight'
+  'Normal': 'normal',
+  'Hada': 'fairy',
+  'Metal': 'steel',
+  'Fantasma': 'ghost',
+  'Lucha': 'fight'
 };
 
 function renderPokemonCard(pokemon) {
@@ -873,12 +873,32 @@ function renderPokemonCard(pokemon) {
         </div>
         <div class="pokemon-card-back">
           <h3 class="pokemon-name">${pokemon.name}</h3>
-          <p>Este Pokémon es débil contra pokemons de tipo ${pokemon.weakness}.</p>
+          <p>Este Pokémon es débil contra pokémons de tipo ${pokemon.weakness}.</p>
         </div>
       </div>
     </div>
   `;
 }
+
+function displayAllPokemon(pokemonList) {
+  const pokedex = document.getElementById('pokedex');
+  pokedex.innerHTML = pokemonList.map(pokemon => renderPokemonCard(pokemon)).join('');
+}
+
+function filterPokemon() {
+  const searchTerm = document.getElementById('search-bar').value.toLowerCase();
+  const filteredPokemon = pokemonList.filter(pokemon => {
+    return (
+      pokemon.name.toLowerCase().includes(searchTerm) ||
+      pokemon.number.toString().includes(searchTerm) ||
+      pokemon.type1.toLowerCase().includes(searchTerm) ||
+      pokemon.type2.toLowerCase().includes(searchTerm)
+    );
+  });
+  displayAllPokemon(filteredPokemon);
+}
+
+displayAllPokemon(pokemonList);
 
 function generatePokemonCards(pokemonList) {
   let cards = '';
@@ -890,4 +910,4 @@ function generatePokemonCards(pokemonList) {
   document.getElementById('pokedex').innerHTML = cards;
 }
 
-generatePokemonCards(pokemonList);
+document.getElementById('search-bar').addEventListener('input', filterPokemon);
