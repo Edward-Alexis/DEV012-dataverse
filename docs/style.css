@@ -22,6 +22,17 @@ h1 {
   color: #ff6347;
 }
 
+#search-bar {
+  width: 100%;
+  max-width: 400px;
+  padding: 10px 15px;
+  border: 2px solid #FFCB05;
+  border-radius: 25px;
+  padding-left: 45px;
+  color: #FFFFFF;
+  font-family: 'Pokemon Solid', sans-serif;
+}
+
 .pokedex {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
