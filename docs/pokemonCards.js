@@ -841,14 +841,14 @@ const typeMap = {
   'Agua': 'water',
   'Bicho': 'bug',
   'Roca': 'rock',
-  'Tierra': 'ground',
+  'Tierra': 'land',
   'Volador': 'flying',
   'Eléctrico': 'electric',
   'Hielo': 'ice',
   'Psíquico': 'psychic',
   'Normal': 'normal',
   'Hada': 'fairy',
-  'Metal': 'steel',
+  'Metal': 'steal',
   'Fantasma': 'ghost',
   'Lucha': 'fight'
 };

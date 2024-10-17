@@ -17,8 +17,8 @@ body {
 }
 
 h1 {
-  font-size: 2.5rem;
-  margin: 20px 0;
+  font-size: 2.9rem;
+  margin: 10px 0;
   color: #ff6347;
 }
 
@@ -29,8 +29,9 @@ h1 {
   border: 2px solid #FFCB05;
   border-radius: 25px;
   padding-left: 45px;
-  color: #FFFFFF;
+  color: #6890f0;
   font-family: 'Pokemon Solid', sans-serif;
+  margin: 15px;
 }
 
 .pokedex {
