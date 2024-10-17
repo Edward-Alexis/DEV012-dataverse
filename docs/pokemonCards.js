@@ -858,26 +858,28 @@ function renderPokemonCard(pokemon) {
   const typeClass2 = typeMap[pokemon.type2];
 
   return `
-    <div class="pokemon-card">
-      <div class="pokemon-card-inner">
-        <div class="pokemon-card-front">
-          <img src="${pokemon.image}" alt="${pokemon.name}">
-          <div class="pokemon-info">
-            <p class="pokemon-number">N.º ${pokemon.number}</p>
-            <h3 class="pokemon-name">${pokemon.name}</h3>
-            <div class="pokemon-types">
-              <span class="type type-${typeClass1}">${pokemon.type1}</span>
-              ${pokemon.type2 ? `<span class="type type-${typeClass2}">${pokemon.type2}</span>` : ''}
-            </div>
+  <div class="pokemon-card">
+    <div class="pokemon-card-inner">
+      <div class="pokemon-card-front">
+        <img src="${pokemon.image}" alt="${pokemon.name}">
+        <div class="pokemon-info">
+          <p class="pokemon-number">N.º ${pokemon.number}</p>
+          <h3 class="pokemon-name">${pokemon.name}</h3>
+          <div class="pokemon-types">
+            <span class="type type-${typeClass1}">${pokemon.type1}</span>
+            ${pokemon.type2 ? `<span class="type type-${typeClass2}">${pokemon.type2}</span>` : ''}
           </div>
         </div>
-        <div class="pokemon-card-back">
-          <h3 class="pokemon-name">${pokemon.name}</h3>
-          <p>Este Pokémon es débil contra pokémons de tipo ${pokemon.weakness}.</p>
-        </div>
+      </div>
+      
+      <!-- Parte trasera de la tarjeta -->
+      <div class="pokemon-card-back">
+        <h3 class="pokemon-name">${pokemon.name}</h3>
+        <p>Este Pokémon es débil contra pokémons de tipo ${pokemon.weakness}.</p>
       </div>
     </div>
-  `;
+  </div>
+`;
 }
 
 function displayAllPokemon(pokemonList) {
