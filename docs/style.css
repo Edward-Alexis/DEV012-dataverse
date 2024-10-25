@@ -1,5 +1,3 @@
-
-
 * {
   margin: 0;
   padding: 0;
@@ -68,7 +66,6 @@ h1 {
   transform: rotateY(180deg);
 }
 
-/* Parte frontal de la tarjeta */
 .pokemon-card-front, .pokemon-card-back {
   position: absolute;
   width: 100%;
@@ -90,7 +87,6 @@ h1 {
   margin: 10px;
   color: #333;
 }
-
 
 .pokemon-card:hover {
   transform: translateY(-10px);
@@ -168,42 +164,46 @@ h1 {
   background-color: brown;
 }
 
-.type-fairy{
-  background-color:pink ;
+.type-fairy {
+  background-color: pink;
 }
 
-.type-fight{
+.type-fight {
   background-color: red;
 }
 
-.type-psychic{
-background-color: purple;
+.type-psychic {
+  background-color: purple;
 }
 
-.type-rock{
-background-color: grey;
+.type-rock {
+  background-color: grey;
 }
 
-.type-steal{
-background-color: blue;
+.type-steal {
+  background-color: blue;
 }
 
-.type-ice{
-background-color: lightblue;
-color: black;
+.type-ice {
+  background-color: lightblue;
+  color: black;
 }
 
-.type-ghost{
-background-color: darkgray;
+.type-ghost {
+  background-color: darkgray;
 }
 
-.type-plant{
-background-color: green;
+.type-plant {
+  background-color: green;
 }
 
 @media (max-width: 1024px) {
   .pokedex {
     grid-template-columns: repeat(3, 1fr);
+  }
+
+  .pokemon-card {
+    height: 300px;
   }
 }
 
@@ -211,10 +211,22 @@ background-color: green;
   .pokedex {
     grid-template-columns: repeat(2, 1fr);
   }
+
+  .pokemon-card {
+    height: 280px;
+  }
 }
 
 @media (max-width: 480px) {
   .pokedex {
     grid-template-columns: 1fr;
+  }
+
+  .pokemon-card {
+    height: 260px;
+  }
+
+  .pokemon-card-inner {
+    transition: transform 0.6s ease;
   }
 }
